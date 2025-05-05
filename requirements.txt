@@ -1,0 +1,9 @@
+torch
+boto3
+transformers
+pandas
+scikit-learn
+sentencepiece
+
+
+
