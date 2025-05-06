@@ -4,6 +4,8 @@ transformers
 pandas
 scikit-learn
 sentencepiece
+fastapi
+uvicorn
 
 
 
