@@ -20,7 +20,7 @@ for obj in response.get('Contents', []):
     file_name = key[len(prefix):]
     if file_name:
         local_path = os.path.join(local_model_dir, file_name)
-        if not os.path.exists(local_path):  # avoid re-downloading
+        if not os.path.exists(local_path): 
             s3.download_file(bucket_name, key, local_path)
 
 tokenizer = T5Tokenizer.from_pretrained(local_model_dir)
@@ -29,7 +29,6 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 model.eval()
 
-# --- FastAPI App ---
 app = FastAPI(title="T5 Fine-Tuned Model API")
 
 class InputText(BaseModel):
