@@ -30,7 +30,9 @@ model.to(device)
 model.eval()
 
 app = FastAPI(title="T5 Fine-Tuned Model API")
-
+@app.get('/home')
+def home():
+    return "Fine-Tuned Model"
 class InputText(BaseModel):
     text: str
     max_length: int = 100
